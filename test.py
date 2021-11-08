@@ -59,5 +59,17 @@ model_history = model.fit(
             x,
             y,
             batch_size= batch_size,
-            epochs = epochs,
+            epochs = 5,
             verbose=True)
+
+def test_model(model, image_path):
+    image = keras.preprocessing.image.load_img(image_path, grayscale=False, color_mode='rgb',
+                                               target_size=(150, 150))
+    img_array = keras.preprocessing.image.img_to_array(image)
+    img_array = tf.expand_dims(img_array, 0)
+    predictions = model.predict(img_array)
+    print(len(predictions))
+    print(np.argmax(predictions))
+path = "/Users/olelokken/Downloads/test.jpg"
+
+test_model(model, path)
