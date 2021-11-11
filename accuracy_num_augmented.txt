@@ -1,0 +1,2 @@
+Batch size, Num_pictures ,Accuracy
+128, 5836, 55%;
