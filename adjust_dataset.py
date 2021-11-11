@@ -1,6 +1,6 @@
 import os
 
-folder = "/Users/olelokken/DEV/Machine-Learning/Age-Estimator/train"
+folder = "/Users/olelokken/DEV/Machine-Learning/Age-Estimator/test"
 set = os.listdir(folder)
 
 for i in set:
