@@ -1,6 +1,6 @@
 import os
 
-folder = "/Users/olelokken/DEV/Machine-Learning/Age-Estimator/test"
+folder = "/Users/olelokken/Downloads/archive/age_prediction_up/age_prediction/test"
 set = os.listdir(folder)
 
 for i in set:
@@ -8,7 +8,7 @@ for i in set:
         list = os.listdir(f"{folder}/{i}")
         num = len(list)
         for file in os.listdir(f"{folder}/{i}"):
-            if(num <= 35):
+            if(num <= 110):
                 break
             path = f"{folder}/{i}/{file}"
             os.remove(path)
